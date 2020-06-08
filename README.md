@@ -30,13 +30,45 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+```
+Declare a class component by extending it to the React.Component parent class. Use constructor function to add state, make sure to have **super()** *otherwise* you won’t have access to the this*
+```
+
 2. Describe the different phases of the component lifecycle.
+
+```
+Mounting Phase/Birth: Render method is invoked and componentDidMount is called. The component built from ground up, initial data to be accessed will be defined by the constructor.
+
+Updating Phase/Growth: Updates components data, setState can be used to change component state and force a re-render.
+
+Un-mounting Phase/Death: Removes component from screen. ComponentWillUnmount can be called and be used for cleanup.
+```
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+```
+Mounting: constructor => set up state, getDerivedStatefromProps => return state based on initial form, render => return JSX, componentDidMount => load data.
+
+Updating: getDerivedStateFromProps => updates state if need be, shouldComponentUpdate => re-render, render => still going, getSnapshotBeforeUpdate => looks at attribute in current DOM and passes to componentDidUpdate, componentDidUpdate => changes are committed to DOM.
+
+Unmounting: componentWillUnmount => component goes away/clean up.
+
+Errors: getDerivedStateFromError => something is broken/return an error, updated state, componentDidCatch => catch and logs errors.
+```
+
 4. Define stateful logic.
 
+```
+Logic built into a component. Deals with state in component, such as a function that handles when the input changes on a text field or function that sets the toggle state.
+```
+
 5. Describe how to test a React component with React Testing Library.
+
+```
+Arrange: set up code to be tested.
+Act: call a method or function that returns results of interest.
+Assert: what we expect to happen and hope it matches what does happen.
+```
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
