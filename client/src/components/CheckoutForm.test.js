@@ -52,10 +52,3 @@ test("form shows success message on submit with form details", async () => {
 
   getByTestId("successMessage");
 });
-
-// // Act
-// const btnTest = getByTestId("check");
-// fireEvent.click(btnTest);
-// // Assert
-// expect(btnTest).toBeInTheDocument;
-// // 💣💣
